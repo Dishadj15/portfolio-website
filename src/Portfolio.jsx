@@ -10,72 +10,142 @@ const LINKS = {
 };
 
 const SKILLS = {
-  "Languages": ["C/C++", "JavaScript", "TypeScript", "Python"],
-  "Frontend": ["React.js", "Tailwind CSS", "HTML", "CSS"],
-  "ML": ["OpenAI APIs", "Data Analysis", "Model Integration"],
-
-  "CS Core": ["DSA", "OOPS", "DBMS", "Operating Systems","Computer Networks"],
-  "Tools": ["Git", "GitHub", "Vercel"],
+  "Languages": ["C++", "Java", "Python", "JavaScript", "TypeScript"],
+  "Frontend": ["React.js", "Next.js", "HTML5", "CSS3", "Tailwind CSS"],
+  "Backend": ["FastAPI", "REST APIs", "SQLite", "PostgreSQL", "JWT Authentication"],
+  "AI": ["LLM APIs", "RAG", "Prompt Engineering", "Agentic AI"],
+  "CS Core": ["DSA", "OOP", "DBMS", "Operating Systems", "Computer Networks"],
+  "Tools": ["Git", "GitHub", "Vercel", "Render"],
 };
 
 const PROJECTS = [
   {
     title: "STASH",
     tag: "Web Dev",
-    links: { live: "https://stash-igdtuw.vercel.app/", github: "https://github.com/Dishadj15/Stash" },
-    description: "Academic resource platform with branch- and semester-wise navigation. Led frontend development from scratch — reached 1,400+ users and 13k+ page views within 5 days of launch.",
+    links: {
+      live: "https://stash-igdtuw.vercel.app/",
+      github: "https://github.com/Dishadj15/Stash"
+    },
+    description:
+      "Academic resource platform with branch- and semester-wise navigation. Led frontend development from scratch — reached 1,400+ users and 13k+ page views within 5 days of launch.",
     stack: ["React.js", "TypeScript", "Tailwind CSS"],
-    metrics: [{ label: "Users", value: "1.4k+" }, { label: "Page Views", value: "13k+" }, { label: "Days to hit it", value: "5" }],
+    metrics: [
+      { label: "Users", value: "1.4k+" },
+      { label: "Page Views", value: "13k+" },
+      { label: "Days to hit it", value: "5" }
+    ],
   },
+
   {
     title: "Mirror",
     tag: "Web Dev",
-    links: { github: "https://github.com/Dishadj15/Mirror" },
-    description: "Browser-based file scanner for CSV, PDF, and DOC formats. Detects anomalies and generates clean, accessible reports — making results easy to interpret without technical overhead.",
+    links: {
+      github: "https://github.com/Dishadj15/Mirror"
+    },
+    description:
+      "Browser-based file scanner for CSV, PDF, and DOC formats. Detects anomalies and generates clean, accessible reports, making results easy to interpret without technical overhead.",
     stack: ["React.js", "JavaScript"],
     metrics: [],
   },
+
   {
-    title: "AI Workflow Integration",
-    tag: "AI/ML",
-    links: {},
-    description: "Integrated OpenAI APIs into production web applications during internship at IGDTUW. Built AI-driven features that improved workflow efficiency and were deployed to real users.",
-    stack: ["OpenAI API", "React.js", "TypeScript"],
+    title: "TrackTalk",
+    tag: "AI / Full Stack",
+    links: {
+      live: "https://tracktalk-three.vercel.app/login",
+      github: "https://github.com/Dishadj15/interview_replay"
+    },
+    description:
+      "AI-powered interview analytics platform that analyzes interview recordings to generate transcripts, speaking-rate, pause, and filler-word insights along with AI-generated performance feedback.",
+    stack: ["React.js", "FastAPI", "Python", "Faster-Whisper"],
+    metrics: [],
+  },
+
+  {
+    title: "VentureAI",
+    tag: "AI / Full Stack",
+    links: {
+      live: "https://ai-startup-agent-v2-lake.vercel.app/",
+      github: "https://github.com/Dishadj15/ventureai"
+    },
+    description:
+      "Multi-agent AI startup assistant that helps turn startup ideas into structured business, product, and technical plans. Contributed to backend development and the Product Agent using LLM-powered workflows.",
+    stack: ["Next.js", "FastAPI", "Python", "Groq LLMs"],
     metrics: [],
   },
 ];
 
 const TIMELINE = [
   {
-    role: "Summer Intern — AI-Powered Full-Stack Development",
+    role: "Event Management Lead",
+    org: "Society of Women Engineers (SWE), IGDTUW",
+    period: "Jul 2026 – Present",
+    points: [
+      "Plan and coordinate technical events, workshops, and community initiatives.",
+      "Work with cross-functional teams to manage event execution and logistics.",
+    ],
+  },
+  {
+    role: "Software Development Program",
+    org: "Sansoftech & IGDTUW",
+    period: "Jun – Jul 2026",
+    points: [
+      "Worked on VentureAI as part of a team-based project, contributing to backend development and the Product Agent.",
+      "Learned about FastAPI, LLM integration, and building AI application workflows.",
+    ],
+  },
+  {
+    role: "Full-Stack Development Intern",
     org: "IGDTUW",
     period: "Jun – Jul 2025",
     points: [
-      "Built and deployed frontend applications with React.js and TypeScript.",
-      "Integrated AI-driven features using OpenAI APIs, improving workflow efficiency.",
-      "Led frontend of STASH — 1,400+ users in 5 days of launch.",
+      "Built frontend applications using React.js and TypeScript and worked with REST APIs.",
+      "Led frontend development of STASH, reaching 1,400+ users and 13k+ page views within 5 days.",
     ],
   },
   {
     role: "HR Head Coordinator",
     org: "Taarangana, IGDTUW",
     period: "Feb – Mar 2025",
-    points: ["Managed volunteer coordination and internal operations for a large-scale college fest."],
+    points: [
+      "Managed volunteer coordination and internal operations for the annual college cultural fest.",
+    ],
   },
   {
-    role: "Public Relations Member",
+    role: "PR Coordinator",
     org: "Rotaract Club of IGDTUW",
     period: "Sep 2024 – Sep 2025",
-    points: ["Coordinated communication and logistics for multiple club events."],
+    points: [
+      "Coordinated communication and outreach activities for club events and initiatives.",
+    ],
   },
 ];
 
 const HACKATHONS = [
-  { event: "Google Summer of Code", result: "Contributor" },
-  { event: "Bharatiya Antariksh Hackathon 2025 — ISRO", result: "Participated" },
-  { event: "Innoquest — Microsoft Office, Gurugram", result: "Top 10 Teams" },
-  { event: "Vihaan 8.0 — Delhi Technological University", result: "Top 128 / 2000+ teams" },
-  { event: "Football — Udghosh, IIT Kanpur Inter-College Sports Fest", result: "3rd Place" },
+  {
+    event: "Buildathon 2026 — TechVerse Solutions × Unstop",
+    result: "1st Place"
+  },
+  {
+    event: "Innoquest — Microsoft Office, Gurugram",
+    result: "Top 10 Teams"
+  },
+  {
+    event: "Vihaan 8.0 — Delhi Technological University",
+    result: "Top 128 / 2000+ teams"
+  },
+  {
+    event: "Udghosh — IIT Kanpur Inter-College Sports Fest",
+    result: "3rd Place · Football"
+  },
+  {
+    event: "Deloitte Data Analytics Virtual Job Simulation — Forage",
+    result: "Completed"
+  },
+  {
+    event: "LeetCode",
+    result: "400+ Problems · 1,479 Rating"
+  },
 ];
 
 const CONTACT_ITEMS = [
@@ -234,7 +304,7 @@ export default function Portfolio() {
             </div>
             
             <div style={{ display: "flex", gap: "clamp(32px, 5vw, 56px)", flexWrap: "wrap" }}>
-              {[["1.4k+", "Users on STASH"], ["13k+", "Page views"], ["8.94", "CGPA"]].map(([num, label]) => (
+              {[["1.4k+", "Users on STASH"], ["13k+", "Page views"], ["9.18", "CGPA"]].map(([num, label]) => (
                 <div key={label}>
                   <p style={{ fontWeight: 700, fontSize: 34, color: "#D97706", letterSpacing: "-0.02em" }}>{num}</p>
                   <p style={{ fontSize: 12.5, color: "#8A7E77", marginTop: 4, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.06em" }}>{label}</p>
@@ -374,24 +444,184 @@ export default function Portfolio() {
             ))}
           </div>
 
-          {/* Education */}
-          <div style={{ background: "rgba(255,255,255,0.6)", border: "1px solid #E8E0D5", borderRadius: 12, padding: "28px 32px", marginTop: 16, backdropFilter: "blur(4px)" }}>
-            <p style={{ fontSize: 11.5, fontWeight: 600, color: "#8A7E77", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 16 }}>Education</p>
-            <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: 16, alignItems: "center" }}>
-              <div>
-                <p style={{ fontWeight: 600, fontSize: 16, color: "#2A2220" }}>B.Tech in Computer Science</p>
-                <p style={{ fontSize: 14, color: "#8A7E77", marginTop: 6 }}>Indira Gandhi Delhi Technical University for Women · 2024 – 2028</p>
-              </div>
-              <div style={{ textAlign: "right" }}>
-                <p style={{ fontSize: 28, fontWeight: 700, color: "#D97706", letterSpacing: "-0.02em" }}>8.94</p>
-                <p style={{ fontSize: 12, color: "#8A7E77", fontWeight: 500 }}>CGPA</p>
+           {/* Education */}
+          <div style={{
+            marginTop: 16
+          }}>
+
+            {/* College */}
+            <div style={{
+              background: "rgba(255,255,255,0.6)",
+              border: "1px solid #E8E0D5",
+              borderRadius: 12,
+              padding: "28px 32px",
+              backdropFilter: "blur(4px)"
+            }}>
+              <p style={{
+                fontSize: 11.5,
+                fontWeight: 600,
+                color: "#8A7E77",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+                marginBottom: 16
+              }}>
+                Education
+              </p>
+
+              <div style={{
+                display: "flex",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: 16,
+                alignItems: "center"
+              }}>
+                <div>
+                  <p style={{
+                    fontWeight: 600,
+                    fontSize: 16,
+                    color: "#2A2220"
+                  }}>
+                    B.Tech in Computer Science
+                  </p>
+
+                  <p style={{
+                    fontSize: 14,
+                    color: "#8A7E77",
+                    marginTop: 6
+                  }}>
+                    Indira Gandhi Delhi Technical University for Women · 2024 – 2028
+                  </p>
+                </div>
+
+                <div style={{ textAlign: "right" }}>
+                  <p style={{
+                    fontSize: 28,
+                    fontWeight: 700,
+                    color: "#D97706",
+                    letterSpacing: "-0.02em"
+                  }}>
+                    9.18
+                  </p>
+
+                  <p style={{
+                    fontSize: 12,
+                    color: "#8A7E77",
+                    fontWeight: 500
+                  }}>
+                    CGPA
+                  </p>
+                </div>
               </div>
             </div>
+
+            {/* School Education */}
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: 16,
+              marginTop: 16
+            }}>
+
+              {/* Class XII */}
+              <div style={{
+                background: "rgba(255,255,255,0.55)",
+                border: "1px solid #E8E0D5",
+                borderRadius: 10,
+                padding: "20px 24px",
+                backdropFilter: "blur(4px)"
+              }}>
+                <p style={{
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: "#8A7E77",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  marginBottom: 10
+                }}>
+                  Class XII · CBSE
+                </p>
+
+                <p style={{
+                  fontWeight: 600,
+                  fontSize: 15,
+                  color: "#2A2220"
+                }}>
+                  Little Flowers Public Senior Secondary School
+                </p>
+
+                <div style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  marginTop: 12
+                }}>
+                  <p style={{ fontSize: 13, color: "#8A7E77" }}>
+                    2023
+                  </p>
+
+                  <p style={{
+                    fontSize: 20,
+                    fontWeight: 700,
+                    color: "#D97706"
+                  }}>
+                    95.2%
+                  </p>
+                </div>
+              </div>
+
+              {/* Class X */}
+              <div style={{
+                background: "rgba(255,255,255,0.55)",
+                border: "1px solid #E8E0D5",
+                borderRadius: 10,
+                padding: "20px 24px",
+                backdropFilter: "blur(4px)"
+              }}>
+                <p style={{
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: "#8A7E77",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  marginBottom: 10
+                }}>
+                  Class X · CBSE
+                </p>
+
+                <p style={{
+                  fontWeight: 600,
+                  fontSize: 15,
+                  color: "#2A2220"
+                }}>
+                  Little Flowers Public Senior Secondary School
+                </p>
+
+                <div style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  marginTop: 12
+                }}>
+                  <p style={{ fontSize: 13, color: "#8A7E77" }}>
+                    2021
+                  </p>
+
+                  <p style={{
+                    fontSize: 20,
+                    fontWeight: 700,
+                    color: "#D97706"
+                  }}>
+                    93.4%
+                  </p>
+                </div>
+              </div>
+
+            </div>
           </div>
+
         </section>
 
         <div className="divider" />
-
         {/* ACHIEVEMENTS */}
         <section id="Achievements" style={{ padding: "100px 0" }}>
           <SectionLabel text="Achievements" />
